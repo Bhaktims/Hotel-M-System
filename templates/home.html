@@ -1,0 +1,63 @@
+{% load static %}  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotelmSys | Home</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+</head>
+<body>
+{% include 'header.html' %}
+<div class="container">
+    <div class="row mt-1">
+        <img src="{% static 'image/banner.jpg' %}" alt="" width="100%" height="70%">
+    </div>    
+<div class="col-md-12"><!--Product list-->
+    <hr>
+    <div class="row ">
+    <div class="col-md-3">
+        <div class="card" style="width: 100%; background-color: lightcyan;">
+            <img src="{%static 'image/Book.jpg'%}" height="260px" width="100%" class="card-img-top" alt="...">
+            <div class="card-body">
+              <a href="bookorder" class="btn btn-danger">BOOK ORDER</a>
+            </div>
+          </div>
+    </div><!--Product 1 end -->
+
+    <div class="col-md-3">
+        <div class="card" style="width: 100%; background-color: lightcyan;">
+            <img src="{%static 'image/Menu.jpg'%}" height="260px" width="100%" class="card-img-top" alt="...">
+            <div class="card-body">
+              <a href="menucard" class="btn btn-danger">MENU CARD</a>
+            </div>
+          </div>
+    </div><!--Product 2 end -->
+
+    <div class="col-md-3">
+        <div class="card" style="width: 100%; background-color: lightcyan;">
+            <img src="{%static 'image/register.jpeg'%}" height="260px" width="100%" class="card-img-top" alt="...">
+            <div class="card-body">
+              <a href="register" class="btn btn-danger">Register Here</a>
+            </div>
+          </div>
+    </div><!--Product 3 end -->
+
+    <div class="col-md-3">
+        <div class="card" style="width: 100%; background-color: lightcyan;">
+            <img src="{%static 'image/login.jpg'%}" height="260px" width="100%" class="card-img-top" alt="...">
+            <div class="card-body">
+              <a href="login" class="btn btn-danger">LOGIN</a>
+            </div>
+          </div>
+    </div><!--Product 4 end -->
+    </div>
+    </div>
+    </div> <!--Product list end-->
+</div>
+
+{% include 'footer.html' %}
+</body>
+</html>

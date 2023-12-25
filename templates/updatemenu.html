@@ -1,0 +1,110 @@
+{% load static %}  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Menu</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+    {% include 'header.html' %}
+    <hr>
+     
+    {% for i in data %}
+    <div class="row mt-1">
+        <div class="col-md-6 mt-1 mx-auto shadow p-3">
+            <h3 class="text-center p-4"><strong> UPDATE MENU </strong></h3>
+            
+            <form  method="post" action="">
+                {% csrf_token %} 
+                
+                <tr>
+                    <label for="Input" class="form-label"><em>Food Name:</em></label>
+                    <input type="text" class="form-control" name="fn" value="{{i.foodname}}" id="Input1">
+                    
+                </tr>
+
+                <tr>
+                    <label for="Input1" class="form-label"><em>Qty :</em></label>
+                    <input type="number" class="form-control" name="qt" value="{{i.qty}}" id="Input1">
+                </tr>
+
+                <tr>
+                        <label for="Input2" class="form-label"><em> Category : </em></label>
+                        <input type="text" class="form-control" name="ca" value="{{i.cat}}" id="Input2">
+                
+                </tr>
+
+                    <tr class="mb-3">
+                        <label for="Input3" class="form-label"><em>Price :</em></label>
+                        <input type="number" class="form-control" name="pri" value="{{i.price}}" id="Input3">
+                    </tr> 
+    
+                      <tr class="mb-3">
+                        <label for="Input4" class="form-label"> <em> Status Details  : </em></label>
+                        <input type="text" class="form-control" name="sd" value="{{i.stat}}" id="Input4">
+                      </tr>
+
+                      <div class="d-grid gap-6 col-6 mx-auto mb-3 pt-4">
+                        <td><input type="submit" name="send" value="SAVE" style="color: crimson;background-color: lightcyan;"/></td> 
+                      </div>
+                      
+            </form>
+            {% endfor %}
+            <div class="d-grid gap-6 col-6 mx-auto mb-1 pt-1">
+                <p style="text-align: center;"><a href="/dash">Go back</a></p>    
+            </div> 
+        </div> 
+    </div> 
+ </body>
+</html>
+
+    <!-- {% for i in data %}
+        <form method="post" action="">
+        {% csrf_token %} 
+        <table width="800" border="1" align="center">
+
+            <tr>
+               <th colspan="2" align="center"><b> Add Menu </b></th>
+            </tr>
+                            
+            <tr>
+                <th> Food Name:</th>
+                <td><input type="text" name="fn" value="{{i.foodname}}"></td>
+            </tr>
+
+            <tr>
+                <th> Qty: </th>
+                <td><input type="number" name="qt" value="{{i.qty}}"></td>
+            </tr>
+            
+            <tr>
+                <th> Category:</th>
+                <td><input type="text" name="ca" value="{{i.cat}}"></td>
+            </tr>
+            
+            <tr>
+                <th> Price: </th>
+                <td><input type="number" name="pri" value="{{i.price}}"></td>
+            </tr>
+
+            <tr>
+                <th> Status Details </th>
+                <td><input type="text" name="sd" value="{{i.stat}}"></td>
+            </tr>
+
+            <tr>
+                <td><label for="seven"><b> </b></label></td>
+                <td><input type="submit" name="send" value="SAVE"/></td>
+             </tr>
+  
+        </table> 
+
+            
+    </form> 
+    {% endfor %} -->
+       
+</body>
+</html>

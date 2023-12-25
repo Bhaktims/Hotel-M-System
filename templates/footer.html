@@ -1,0 +1,51 @@
+{% load static %} 
+{% load bootstrap_icons %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    
+</head>
+<body>
+    <div class="container">
+    <div class="row mt-2 p-3" style="background-color: lightcyan">
+        <div class="col-md-4">
+          <h5> Address </h5>
+          <hr>
+          <p>
+            1/8 , ABCD ,<br>
+            haxjkXBLNX, HBXKSBKNXLASK,<br>
+            Mumbai - 400 033
+          </p>
+          <p>
+            Mobile : 98989 98989
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <h5> Quick Links </h5>
+          <hr>
+          <p><a href="/" class="anchor" style="color: black;"> Home </a></p>
+          <p><a href="bookorder" class="anchor" style="color: black;"> Book Order </a></p>
+          <p><a href="menucard" class="anchor" style="color: black;"> Menu Card </a></p>
+
+          
+        </div>
+
+        <div class="col-md-4">
+          <h5> Connect Us </h5>
+          <hr>
+          <h5 class="social"><a href="https://www.facebook.com" target="_blank">{% bs_icon 'facebook' color='black' size='1.2em'%}</a></h5>&nbsp;&nbsp;&nbsp;&nbsp;
+          <h5 class="social"><a href="https://www.twitter.com" target="_blank">{% bs_icon 'twitter-x' color='black' size='1.2em'%}</a></h5>&nbsp;&nbsp;&nbsp;&nbsp;
+          <h5 class="social"><a href="https://www.instagram.com" target="_blank">{% bs_icon 'instagram' color='black' size='1.2em'%}</a></h5>&nbsp;&nbsp;&nbsp;&nbsp;
+          <h5 class="social"><a href="https://www.linkedin.com" target="_blank">{% bs_icon 'linkedin' color='black' size='1.2em'%}</a></h5>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+
+      </div><!--footer end-->
+    </div>
+</body>
+</html>

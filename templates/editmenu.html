@@ -1,0 +1,70 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+    
+    <table border="1">
+       
+        <tr>
+            <th>S/N</th>
+            <th>Food Name</th>
+            <th>Qty</th>
+            <th>Category</th>
+            <th>price</th>
+            <th>Status</th>
+
+        </tr>
+
+        {% for i in data %}
+            
+            <tr>
+                 <td>{{i.id}}</td>
+
+                {% if i.foodname == "1" %}
+                    <td> Punjabi Food </td>
+                {% elif == "2" %}
+                    <td> Maharashtrian Food </td>
+                {% elif == "3" %}
+                    <td> South Indian Food </td>
+                {% else %}
+                    <td> Chinese Food </td>
+                {% endif %}
+
+                 <td>{{i.qty}}</td>
+
+                {% if i.cat == "1" %}
+                    <td> Veg </td>
+                {% else %}
+                    <td> Non-Veg </td>
+                {% endif %}
+                                 
+             </tr>
+        
+        {% endfor %}
+
+        <tr>
+            <th> price: </th>
+            <td><input type="number" name="pr"></td>
+        </tr>
+        
+        <tr>
+            <th> Status:</th>
+            <td>
+                <select name="sta">
+                    <option></option>
+                    <option value="1"> active </option>
+                    <option value="2"> inactive </option>
+            
+                </select>
+            </td>
+        </tr>
+
+</body>
+</html>

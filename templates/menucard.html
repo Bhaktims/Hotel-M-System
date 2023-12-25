@@ -1,0 +1,77 @@
+{% load static %}  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Card</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<style>
+  
+</style>
+</head>
+<body>
+    {% include 'header.html' %}
+    
+    <div class="container">
+        <div class="row">
+          <div class="col-md-2 mt-5">
+            <h5 style="text-align: center;background-color:lightgray;color: crimson;"><i>Sort By Price</i></h5>
+            <hr>
+            <p><a href="/menucard">All</a></p>
+            <p><a href="/sort/1">High to Low</a></p>
+            <p><a href="/sort/0">Low to High</a></p>
+          <hr>
+          
+          <h5 style="text-align: center;background-color:lightgray;color: crimson;"><i> Filter By Price </i> </h5>
+          <hr>
+          <p><a href="/filprice/1"> > 400 </a></p>
+          <p><a href="/filprice/2"> < 400 </a></p>
+           
+          <h5 style="text-align: center;background-color:lightgray;color: crimson;"><i> Quick Links </i> </h5>
+          <hr>
+          
+          <h4><a href="/bookorder" target="_blank"><i>Book Order</i></a></h4>
+             
+          </div>
+  
+          <div class="col-md-10">
+            <div class="row mt-5">
+              <h3 style="text-align: center;background-color:lightgray;color: crimson;"><i> Menu Card : </i></h3>
+              <table class="table table-striped-columns">
+                <thead>
+                  <tr>
+                    <th scope="col">S/N</th>
+                    <th scope="col">Food Name</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Status Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                {% for i in data %}
+                    <tr>
+                        <td>{{i.id}}</td>
+                        <td>{{i.foodname}}</td>
+                        <td>{{i.qty}}</td>
+                        <td>{{i.cat}}</td>
+                        <td>{{i.price}}</td>
+                        <td>{{i.stat}}</td>
+                        
+                    </tr>
+                {% endfor %}
+          
+                </tbody>
+              </table>
+  
+  
+            </div>
+          </div>
+        </div>
+      </div>
+         
+</body>
+</html>

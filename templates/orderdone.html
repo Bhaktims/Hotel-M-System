@@ -1,0 +1,34 @@
+{% load static %}  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Done </title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+{% include 'header.html' %}
+    <div class="container ">
+        <div class="row my-5">
+
+            <div class="col-md-4 mt-5">
+                <img src="{%static 'image/order.jpg'%}" height="260px" width="100%" class="card-img-top" alt="...">
+            </div>
+            
+            <div class="col-md-4 mt-5" style="background-color: lightcyan;color:crimson;">
+                <h2><i> Order placed successfully </i></h2>
+                <h3> We are delivering soon!! </h3>
+                <p><a href="/"> Home </a></p>    
+            </div>
+            <div class="col-md-4 mt-5 " style="background-color: lightcyan;">
+            
+            </div>
+        </div>
+    </div>
+    
+
+{% include 'footer.html' %}
+</body>
+</html>
